@@ -18,15 +18,12 @@
 Ext.define('Traccar.view.SettingsMenu', {
     extend: 'Ext.button.Button',
     xtype: 'settingsMenu',
-
     requires: [
         'Traccar.view.SettingsMenuController'
     ],
-
-    glyph: 'xf013@FontAwesome',
+    glyph: 'xf007@FontAwesome',
     tooltip: Strings.settingsTitle,
     tooltipType: 'title',
-
     menu: {
         controller: 'settings',
 
