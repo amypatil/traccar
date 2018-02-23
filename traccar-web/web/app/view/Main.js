@@ -25,7 +25,8 @@ Ext.define('Traccar.view.Main', {
         'Traccar.view.State',
         'Traccar.view.Report',
         'Traccar.view.Events',
-        'Traccar.view.map.Map'
+        'Traccar.view.map.Map',
+        'Traccar.view.Header'
     ],
 
     controller: 'mainController',
@@ -40,13 +41,14 @@ Ext.define('Traccar.view.Main', {
 
     items: [
     	{
-    		header: false,
-    	    collapsible: false,
+    		collapsible: false,
     	    split: false,
     	    region: 'north',
-            html: '<h1 class="x-panel-header">Page Title</h1>',
+//            html: '<h1 class="x-panel-header">Page Title</h1>',
             border: false,
-            margin: '0 0 1 0'
+            margin: '0 0 1 0',
+            xtype: 'headerView',
+            reference: 'headerView'
      },
     	
     	{

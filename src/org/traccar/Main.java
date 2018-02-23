@@ -32,6 +32,8 @@ public final class Main {
     public static void main(String[] args) throws Exception {
         Locale.setDefault(Locale.ENGLISH);
 
+        
+        args[0] = "debug.xml";
         Context.init(args);
         Log.info("Starting server...");
 
