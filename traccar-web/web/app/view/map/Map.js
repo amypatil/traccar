@@ -18,14 +18,10 @@
 Ext.define('Traccar.view.map.Map', {
     extend: 'Traccar.view.map.BaseMap',
     xtype: 'mapView',
-
     requires: [
-        'Traccar.view.map.MapController',
-        'Traccar.view.SettingsMenu'
+        'Traccar.view.map.MapController'
     ],
-
     controller: 'map',
-
     title: Strings.mapTitle,
     tbar: {
         componentCls: 'toolbar-header-style',
@@ -78,12 +74,6 @@ Ext.define('Traccar.view.map.Map', {
             stateId: 'device-follow-button',
             toggleHandler: 'onFollowClick'
         }
-        
-//        , {
-//            xtype: 'settingsMenu',
-//            enableToggle: false
-//        }
-        
         ]
     },
 

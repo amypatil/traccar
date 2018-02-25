@@ -20,13 +20,15 @@ Ext.define('Traccar.view.Main', {
     alias: 'widget.main',
 
     requires: [
+    	
         'Traccar.view.MainController',
         'Traccar.view.edit.Devices',
         'Traccar.view.State',
         'Traccar.view.Report',
         'Traccar.view.Events',
         'Traccar.view.map.Map',
-        'Traccar.view.Header'
+        'Traccar.view.Header',
+        'Traccar.view.Menu',
     ],
 
     controller: 'mainController',
@@ -44,7 +46,6 @@ Ext.define('Traccar.view.Main', {
     		collapsible: false,
     	    split: false,
     	    region: 'north',
-//            html: '<h1 class="x-panel-header">Page Title</h1>',
             border: false,
             margin: '0 0 1 0',
             xtype: 'headerView',
@@ -82,9 +83,12 @@ Ext.define('Traccar.view.Main', {
         titleCollapse: true,
         floatable: false
     }, {
-        region: 'center',
-        xtype: 'mapView',
+    	
+//        xtype: 'mapView',
+    	xtype : 'menuView',
+    	region: 'center',
         collapsible: false
+        
     }, {
         region: 'east',
         xtype: 'eventsView',
