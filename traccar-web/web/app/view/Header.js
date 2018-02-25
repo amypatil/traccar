@@ -20,7 +20,7 @@ Ext.define('Traccar.view.Header', {
         {
         	xtype : 'panel',
 			layout: 'column',
-			flex:0.47,
+			flex:0.58,
         	items: [
         		{
         			xtype: 'image',
@@ -95,9 +95,8 @@ Ext.define('Traccar.view.Header', {
         
         {
 			xtype : 'tbtext',
-			 reference: 'userName',
-			html : '', //Traccar.app.getUser().data.name
-			baseCls : 'x-panel-header-title-default'
+			reference: 'userName',
+			margin: '5 5 5 5' 	
 		},
         {
         	xtype : 'panel',
@@ -110,9 +109,5 @@ Ext.define('Traccar.view.Header', {
         	    {xtype: 'settingsMenu',height:42,  margin: '10 10 10 10'},
         	]
         }
-    ],
-    init: function () {
-    	alert(Traccar.app.getUser().data.name);
-    	this.lookupReference('userName').html(Traccar.app.getUser().data.name)
-    }
+    ]
 });
