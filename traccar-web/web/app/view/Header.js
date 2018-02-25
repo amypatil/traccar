@@ -17,22 +17,27 @@ Ext.define('Traccar.view.Header', {
     items: [
         {
         	xtype : 'panel',
-        	layout: 'column',
+			layout: 'column',
+			flex:0.47,
         	items: [
         		{
         			xtype: 'image',
-                    src: 'http://www.sencha.com/assets/images/sencha-avatar-64x64.png',
-                    height: 62,
-                    width: 62,
+                    src: 'https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/location-alt-512.png',
+                    height: 40,
+					width: 35,
+					margin: '10 0 0 0'
         		},{
         			html : '<h1>MYPINHERE</h1>',
         			margin: '5 5 5 5' 
         		}
         	]
-        },
-        {
-        	xtype: 'button',
-            tooltipType: 'title',
+		},
+		
+		{
+			xtype: 'button',
+			text:'Map',
+			scale   : 'medium',
+            tooltipType: 'Map',
             stateEvents: ['toggle'],
             enableToggle: true,
             stateful: {
@@ -43,12 +48,15 @@ Ext.define('Traccar.view.Header', {
         	 },
              reference: 'showMapButton',
              title:'Map',
-             tooltip: Strings.reportTitle
+			 tooltip: Strings.reportTitle,
+			 margin: '14 5 5 5' 
         },
         
         {
-        	xtype: 'button',
-            tooltipType: 'title',
+			xtype: 'button',
+			text:'Report',
+			scale   : 'medium',
+            tooltipType: 'Report',
             stateEvents: ['toggle'],
             enableToggle: true,
             stateful: {
@@ -59,13 +67,16 @@ Ext.define('Traccar.view.Header', {
         	 },
              reference: 'showMapButton',
              title:'Map',
-             tooltip: Strings.reportTitle
+			 tooltip: Strings.reportTitle,
+			 margin: '14 5 5 5' 
         },
         
         {
-        	xtype: 'button',
-            tooltipType: 'title',
-            stateEvents: ['toggle'],
+			xtype: 'button',
+			text:'Event',
+			scale   : 'medium',
+            tooltipType: 'Event',
+            stateEvents: ['click','changeMe'],
             enableToggle: true,
             stateful: {
                 pressed: true
@@ -75,7 +86,8 @@ Ext.define('Traccar.view.Header', {
         	 },
              reference: 'showMapButton',
              title:'Map',
-             tooltip: Strings.reportTitle
+			 tooltip: Strings.reportTitle,
+			 margin: '14 5 5 5' 
         },
         
         
