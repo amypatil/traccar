@@ -23,6 +23,7 @@ Ext.define('Traccar.view.map.Map', {
     ],
     controller: 'map',
     title: Strings.mapTitle,
+    
     tbar: {
         componentCls: 'toolbar-header-style',
         defaults: {

@@ -30,6 +30,55 @@ Ext.define('Traccar.view.Header', {
         		}
         	]
         },
+        {
+        	xtype: 'button',
+            tooltipType: 'title',
+            stateEvents: ['toggle'],
+            enableToggle: true,
+            stateful: {
+                pressed: true
+            },
+        	 handler: function(){
+        		 Ext.GlobalEvents.fireEvent('setTabEvent',{'tab':0});
+        	 },
+             reference: 'showMapButton',
+             title:'Map',
+             tooltip: Strings.reportTitle
+        },
+        
+        {
+        	xtype: 'button',
+            tooltipType: 'title',
+            stateEvents: ['toggle'],
+            enableToggle: true,
+            stateful: {
+                pressed: true
+            },
+        	 handler: function(){
+        		 Ext.GlobalEvents.fireEvent('setTabEvent',{'tab':1});
+        	 },
+             reference: 'showMapButton',
+             title:'Map',
+             tooltip: Strings.reportTitle
+        },
+        
+        {
+        	xtype: 'button',
+            tooltipType: 'title',
+            stateEvents: ['toggle'],
+            enableToggle: true,
+            stateful: {
+                pressed: true
+            },
+        	 handler: function(){
+        		 Ext.GlobalEvents.fireEvent('setTabEvent',{'tab':2});
+        	 },
+             reference: 'showMapButton',
+             title:'Map',
+             tooltip: Strings.reportTitle
+        },
+        
+        
         { xtype: 'tbfill'},
         {
         	xtype : 'panel',
