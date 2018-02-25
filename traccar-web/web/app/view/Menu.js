@@ -16,7 +16,7 @@ Ext.define('Traccar.view.Menu', {
 		xtype: 'mapView'
 	}, {
 		title : 'Report',
-		html : 'This is tab 2 content.'
+		 xtype: 'reportView'
 	}, {
 		title : 'Event',
 		html : 'This is tab 3 content.'

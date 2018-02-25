@@ -74,15 +74,19 @@ Ext.define('Traccar.view.Main', {
             region: 'south',
             xtype: 'stateView'
         }]
-    }, {
-        region: 'south',
-        xtype: 'reportView',
-        reference: 'reportView',
-        height: Traccar.Style.reportHeight,
-        collapsed: true,
-        titleCollapse: true,
-        floatable: false
-    }, {
+    }, 
+    
+//    {
+//        region: 'south',
+//        xtype: 'reportView',
+//        reference: 'reportView',
+//        height: Traccar.Style.reportHeight,
+//        collapsed: true,
+//        titleCollapse: true,
+//        floatable: false
+//    }, 
+    
+    {
     	
 //        xtype: 'mapView',
     	xtype : 'menuView',

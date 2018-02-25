@@ -11,8 +11,10 @@ Ext.define('Traccar.view.Header', {
     extend: 'Ext.panel.Panel',
     xtype: 'headerView',
     requires: [
-        'Traccar.view.SettingsMenu'
+        'Traccar.view.SettingsMenu',
+        'Traccar.view.HeaderController'
     ],
+    controller: 'headerController',
     layout: 'hbox',
     items: [
         {
@@ -89,9 +91,14 @@ Ext.define('Traccar.view.Header', {
 			 tooltip: Strings.reportTitle,
 			 margin: '14 5 5 5' 
         },
-        
-        
         { xtype: 'tbfill'},
+        
+        {
+			xtype : 'tbtext',
+			 reference: 'userName',
+			html : '', //Traccar.app.getUser().data.name
+			baseCls : 'x-panel-header-title-default'
+		},
         {
         	xtype : 'panel',
         	layout: {
@@ -103,5 +110,9 @@ Ext.define('Traccar.view.Header', {
         	    {xtype: 'settingsMenu',height:42,  margin: '10 10 10 10'},
         	]
         }
-    ]
+    ],
+    init: function () {
+    	alert(Traccar.app.getUser().data.name);
+    	this.lookupReference('userName').html(Traccar.app.getUser().data.name)
+    }
 });
